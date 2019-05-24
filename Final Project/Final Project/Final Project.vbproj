@@ -73,29 +73,29 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="main.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="main.Designer.vb">
+      <DependentUpon>main.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.vb">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <Compile Include="level1.Designer.vb">
+      <DependentUpon>level1.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form2.vb">
+    <Compile Include="level1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.vb">
-      <DependentUpon>Form3.vb</DependentUpon>
+    <Compile Include="howtoplay.Designer.vb">
+      <DependentUpon>howtoplay.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form3.vb">
+    <Compile Include="howtoplay.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form4.Designer.vb">
-      <DependentUpon>Form4.vb</DependentUpon>
+    <Compile Include="continue.Designer.vb">
+      <DependentUpon>continue.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form4.vb">
+    <Compile Include="continue.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form5.Designer.vb">
@@ -121,17 +121,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.vb</DependentUpon>
+    <EmbeddedResource Include="level1.resx">
+      <DependentUpon>level1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.vb</DependentUpon>
+    <EmbeddedResource Include="howtoplay.resx">
+      <DependentUpon>howtoplay.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
-      <DependentUpon>Form4.vb</DependentUpon>
+    <EmbeddedResource Include="continue.resx">
+      <DependentUpon>continue.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form5.resx">
       <DependentUpon>Form5.vb</DependentUpon>
@@ -163,6 +163,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ship1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invader2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
