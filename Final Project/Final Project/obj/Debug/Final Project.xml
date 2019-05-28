@@ -32,6 +32,11 @@ Final Project
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Final_Project.My.Resources.Resources.laser">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Final_Project.My.Resources.Resources.ship">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
