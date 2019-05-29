@@ -2,10 +2,9 @@
     Dim row1 As New Collection
     Dim row2 As New Collection
     Dim score As Integer
-    Dim lives As Byte
+    Dim lives As Byte = 2
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
 
         timerL.Enabled = False 'disabling the laser timer 
 
@@ -37,7 +36,6 @@
             End If
         Next
     End Sub
-
     Private Sub RestartToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RestartToolStripMenuItem.Click
         Dim message As Byte 'declaring local variable
         message = MsgBox("Are you sure you want to restart?", vbYesNo) 'message box
@@ -45,7 +43,6 @@
             Application.Restart() 'restart
         End If
     End Sub
-
     Private Sub CloseGameToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CloseGameToolStripMenuItem.Click
         Dim response As Byte 'declaring local variable
         response = MsgBox("Are you sure you want to exit?", vbYesNo) 'message box which gives the user a choice to close the program
@@ -65,7 +62,7 @@
         If e.KeyCode = Keys.Up Then
             If picLaser.Visible = True Then
                 picLaser.Top = picShip.Top
-                picLaser.Left = picShip.Left
+                picLaser.Left = picShip.Left + 15
                 timerL.Enabled = True
             End If
         End If
@@ -76,31 +73,49 @@
     End Sub
 
     Private Sub timer_Tick(sender As Object, e As EventArgs) Handles timer.Tick
-        Dim change1 As Boolean = True
+        Static change As Boolean
+
+        scores()
+
+        'If row1(i).Bounds.IntersectsWith(lblRight.Bounds) Then
+        '    change = True
+        'ElseIf row1(i).Bounds.IntersectsWith(lblLeft.Bounds) Then
+        '    change = False
+        'End If
+        'If picT1.Bounds.IntersectsWith(lblLeft.Bounds) Or picT6.Bounds.IntersectsWith(lblRight.Bounds) Then
+        '    change = False
+        'ElseIf picB6.Bounds.IntersectsWith(lblRight.Bounds) Or picB1.Bounds.IntersectsWith(lblLeft.Bounds) Then
+        '    change = True
+        'End If
+
+        If picLaser.Bounds.IntersectsWith(picShip.Bounds) Then
+            reset()
+            lives -= 1
+            MsgBox("You have " & lives & "left!")
+        End If
+
 
         For i As Byte = 1 To 6
-            If change1 = False Then
+            If row1(i).Bounds.IntersectsWith(lblRight.Bounds) Then
+                change = True
+            ElseIf row1(i).Bounds.IntersectsWith(lblLeft.Bounds) Then
+                change = False
+            End If
+            If change = False Then
                 row1(i).Left += 5
                 row2(i).left -= 5
-            ElseIf change1 = True Then
+            ElseIf change = True Then
                 row1(i).Left -= 5
                 row2(i).left += 5
             End If
-            If row1(i).Bounds.IntersectsWith(lblRight.Bounds) Then
-                change1 = True
-            ElseIf row1(i).Bounds.IntersectsWith(lblLeft.Bounds) Then
-                change1 = False
-            End If
         Next
 
-        If change1 = True Then
+        If change = True Then
             lblTest.Text = "True"
         Else
             lblTest.Text = "False"
         End If
-        scores()
     End Sub
-
     Private Sub TimerL_Tick(sender As Object, e As EventArgs) Handles timerL.Tick
         If picLaser.Visible = True Then
             picLaser.Top -= 1

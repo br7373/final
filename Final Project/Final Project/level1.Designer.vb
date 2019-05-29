@@ -146,6 +146,7 @@ Partial Class Form2
         '
         'lblRight
         '
+        Me.lblRight.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblRight.Location = New System.Drawing.Point(654, 0)
         Me.lblRight.Name = "lblRight"
         Me.lblRight.Size = New System.Drawing.Size(13, 496)
@@ -153,6 +154,7 @@ Partial Class Form2
         '
         'lblLeft
         '
+        Me.lblLeft.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblLeft.Location = New System.Drawing.Point(0, 0)
         Me.lblLeft.Name = "lblLeft"
         Me.lblLeft.Size = New System.Drawing.Size(10, 496)
