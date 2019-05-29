@@ -91,7 +91,7 @@
         If picLaser.Bounds.IntersectsWith(picShip.Bounds) Then
             reset()
             lives -= 1
-            MsgBox("You have " & lives & "left!")
+            MsgBox("You have " & lives & "lives left!")
         End If
 
 

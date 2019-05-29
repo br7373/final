@@ -50,6 +50,7 @@ Partial Class Form2
         Me.picB1 = New System.Windows.Forms.PictureBox()
         Me.picB4 = New System.Windows.Forms.PictureBox()
         Me.picB6 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.menuStrip.SuspendLayout()
         CType(Me.picLaser, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picT1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -65,6 +66,7 @@ Partial Class Form2
         CType(Me.picB1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picB4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picB6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'timer
@@ -163,7 +165,7 @@ Partial Class Form2
         'picLaser
         '
         Me.picLaser.Image = Global.Final_Project.My.Resources.Resources.laser
-        Me.picLaser.Location = New System.Drawing.Point(323, 408)
+        Me.picLaser.Location = New System.Drawing.Point(324, 409)
         Me.picLaser.Name = "picLaser"
         Me.picLaser.Size = New System.Drawing.Size(5, 16)
         Me.picLaser.TabIndex = 23
@@ -298,11 +300,21 @@ Partial Class Form2
         Me.picB6.TabIndex = 47
         Me.picB6.TabStop = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Final_Project.My.Resources.Resources.laser
+        Me.PictureBox1.Location = New System.Drawing.Point(361, 180)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(5, 16)
+        Me.PictureBox1.TabIndex = 48
+        Me.PictureBox1.TabStop = False
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(667, 493)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.picB6)
         Me.Controls.Add(Me.picB4)
         Me.Controls.Add(Me.picB1)
@@ -344,6 +356,7 @@ Partial Class Form2
         CType(Me.picB1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picB4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picB6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -376,4 +389,5 @@ Partial Class Form2
     Friend WithEvents picB1 As PictureBox
     Friend WithEvents picB4 As PictureBox
     Friend WithEvents picB6 As PictureBox
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
