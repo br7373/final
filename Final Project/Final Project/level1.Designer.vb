@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form2
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form2
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.timer = New System.Windows.Forms.Timer(Me.components)
@@ -39,34 +39,32 @@ Partial Class Form2
         Me.picT1 = New System.Windows.Forms.PictureBox()
         Me.picShip = New System.Windows.Forms.PictureBox()
         Me.timerL = New System.Windows.Forms.Timer(Me.components)
-        Me.picT2 = New System.Windows.Forms.PictureBox()
+        Me.picB2 = New System.Windows.Forms.PictureBox()
         Me.picT3 = New System.Windows.Forms.PictureBox()
         Me.picT5 = New System.Windows.Forms.PictureBox()
-        Me.picB2 = New System.Windows.Forms.PictureBox()
-        Me.picT4 = New System.Windows.Forms.PictureBox()
-        Me.picT6 = New System.Windows.Forms.PictureBox()
+        Me.picT2 = New System.Windows.Forms.PictureBox()
+        Me.picB4 = New System.Windows.Forms.PictureBox()
+        Me.picB6 = New System.Windows.Forms.PictureBox()
         Me.picB3 = New System.Windows.Forms.PictureBox()
         Me.picB5 = New System.Windows.Forms.PictureBox()
         Me.picB1 = New System.Windows.Forms.PictureBox()
-        Me.picB4 = New System.Windows.Forms.PictureBox()
-        Me.picB6 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.picT4 = New System.Windows.Forms.PictureBox()
+        Me.picT6 = New System.Windows.Forms.PictureBox()
         Me.menuStrip.SuspendLayout()
         CType(Me.picLaser, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picT1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picShip, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picT2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picB2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picT3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picT5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picB2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picT4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picT6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picT2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picB4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picB6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picB3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picB5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picB1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picB4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picB6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picT4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picT6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'timer
@@ -140,7 +138,7 @@ Partial Class Form2
         'lblTest
         '
         Me.lblTest.AutoSize = True
-        Me.lblTest.Location = New System.Drawing.Point(16, 319)
+        Me.lblTest.Location = New System.Drawing.Point(73, 320)
         Me.lblTest.Name = "lblTest"
         Me.lblTest.Size = New System.Drawing.Size(39, 13)
         Me.lblTest.TabIndex = 20
@@ -149,23 +147,23 @@ Partial Class Form2
         'lblRight
         '
         Me.lblRight.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.lblRight.Location = New System.Drawing.Point(654, 0)
+        Me.lblRight.Location = New System.Drawing.Point(625, 37)
         Me.lblRight.Name = "lblRight"
-        Me.lblRight.Size = New System.Drawing.Size(13, 496)
+        Me.lblRight.Size = New System.Drawing.Size(42, 459)
         Me.lblRight.TabIndex = 21
         '
         'lblLeft
         '
         Me.lblLeft.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.lblLeft.Location = New System.Drawing.Point(0, 0)
+        Me.lblLeft.Location = New System.Drawing.Point(0, 37)
         Me.lblLeft.Name = "lblLeft"
-        Me.lblLeft.Size = New System.Drawing.Size(10, 496)
+        Me.lblLeft.Size = New System.Drawing.Size(38, 459)
         Me.lblLeft.TabIndex = 22
         '
         'picLaser
         '
         Me.picLaser.Image = Global.Final_Project.My.Resources.Resources.laser
-        Me.picLaser.Location = New System.Drawing.Point(324, 409)
+        Me.picLaser.Location = New System.Drawing.Point(324, 412)
         Me.picLaser.Name = "picLaser"
         Me.picLaser.Size = New System.Drawing.Size(5, 16)
         Me.picLaser.TabIndex = 23
@@ -195,15 +193,15 @@ Partial Class Form2
         Me.timerL.Enabled = True
         Me.timerL.Interval = 1
         '
-        'picT2
+        'picB2
         '
-        Me.picT2.Image = Global.Final_Project.My.Resources.Resources.invader2
-        Me.picT2.Location = New System.Drawing.Point(162, 66)
-        Me.picT2.Name = "picT2"
-        Me.picT2.Size = New System.Drawing.Size(51, 42)
-        Me.picT2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picT2.TabIndex = 37
-        Me.picT2.TabStop = False
+        Me.picB2.Image = Global.Final_Project.My.Resources.Resources.invader2
+        Me.picB2.Location = New System.Drawing.Point(162, 132)
+        Me.picB2.Name = "picB2"
+        Me.picB2.Size = New System.Drawing.Size(51, 42)
+        Me.picB2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picB2.TabIndex = 37
+        Me.picB2.TabStop = False
         '
         'picT3
         '
@@ -223,34 +221,34 @@ Partial Class Form2
         Me.picT5.TabIndex = 39
         Me.picT5.TabStop = False
         '
-        'picB2
+        'picT2
         '
-        Me.picB2.Image = Global.Final_Project.My.Resources.Resources.invader
-        Me.picB2.Location = New System.Drawing.Point(162, 132)
-        Me.picB2.Name = "picB2"
-        Me.picB2.Size = New System.Drawing.Size(51, 42)
-        Me.picB2.TabIndex = 40
-        Me.picB2.TabStop = False
+        Me.picT2.Image = Global.Final_Project.My.Resources.Resources.invader
+        Me.picT2.Location = New System.Drawing.Point(162, 66)
+        Me.picT2.Name = "picT2"
+        Me.picT2.Size = New System.Drawing.Size(51, 42)
+        Me.picT2.TabIndex = 40
+        Me.picT2.TabStop = False
         '
-        'picT4
+        'picB4
         '
-        Me.picT4.Image = Global.Final_Project.My.Resources.Resources.invader2
-        Me.picT4.Location = New System.Drawing.Point(340, 66)
-        Me.picT4.Name = "picT4"
-        Me.picT4.Size = New System.Drawing.Size(51, 42)
-        Me.picT4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picT4.TabIndex = 41
-        Me.picT4.TabStop = False
+        Me.picB4.Image = Global.Final_Project.My.Resources.Resources.invader2
+        Me.picB4.Location = New System.Drawing.Point(340, 132)
+        Me.picB4.Name = "picB4"
+        Me.picB4.Size = New System.Drawing.Size(51, 42)
+        Me.picB4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picB4.TabIndex = 41
+        Me.picB4.TabStop = False
         '
-        'picT6
+        'picB6
         '
-        Me.picT6.Image = Global.Final_Project.My.Resources.Resources.invader2
-        Me.picT6.Location = New System.Drawing.Point(516, 66)
-        Me.picT6.Name = "picT6"
-        Me.picT6.Size = New System.Drawing.Size(51, 42)
-        Me.picT6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picT6.TabIndex = 42
-        Me.picT6.TabStop = False
+        Me.picB6.Image = Global.Final_Project.My.Resources.Resources.invader2
+        Me.picB6.Location = New System.Drawing.Point(516, 132)
+        Me.picB6.Name = "picB6"
+        Me.picB6.Size = New System.Drawing.Size(51, 42)
+        Me.picB6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picB6.TabIndex = 42
+        Me.picB6.TabStop = False
         '
         'picB3
         '
@@ -282,50 +280,40 @@ Partial Class Form2
         Me.picB1.TabIndex = 45
         Me.picB1.TabStop = False
         '
-        'picB4
+        'picT4
         '
-        Me.picB4.Image = Global.Final_Project.My.Resources.Resources.invader
-        Me.picB4.Location = New System.Drawing.Point(340, 132)
-        Me.picB4.Name = "picB4"
-        Me.picB4.Size = New System.Drawing.Size(51, 42)
-        Me.picB4.TabIndex = 46
-        Me.picB4.TabStop = False
+        Me.picT4.Image = Global.Final_Project.My.Resources.Resources.invader
+        Me.picT4.Location = New System.Drawing.Point(340, 66)
+        Me.picT4.Name = "picT4"
+        Me.picT4.Size = New System.Drawing.Size(51, 42)
+        Me.picT4.TabIndex = 46
+        Me.picT4.TabStop = False
         '
-        'picB6
+        'picT6
         '
-        Me.picB6.Image = Global.Final_Project.My.Resources.Resources.invader
-        Me.picB6.Location = New System.Drawing.Point(516, 132)
-        Me.picB6.Name = "picB6"
-        Me.picB6.Size = New System.Drawing.Size(51, 42)
-        Me.picB6.TabIndex = 47
-        Me.picB6.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.Final_Project.My.Resources.Resources.laser
-        Me.PictureBox1.Location = New System.Drawing.Point(361, 180)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(5, 16)
-        Me.PictureBox1.TabIndex = 48
-        Me.PictureBox1.TabStop = False
+        Me.picT6.Image = Global.Final_Project.My.Resources.Resources.invader
+        Me.picT6.Location = New System.Drawing.Point(516, 66)
+        Me.picT6.Name = "picT6"
+        Me.picT6.Size = New System.Drawing.Size(51, 42)
+        Me.picT6.TabIndex = 47
+        Me.picT6.TabStop = False
         '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(667, 493)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.picB6)
-        Me.Controls.Add(Me.picB4)
+        Me.Controls.Add(Me.picT6)
+        Me.Controls.Add(Me.picT4)
         Me.Controls.Add(Me.picB1)
         Me.Controls.Add(Me.picB5)
         Me.Controls.Add(Me.picB3)
-        Me.Controls.Add(Me.picT6)
-        Me.Controls.Add(Me.picT4)
-        Me.Controls.Add(Me.picB2)
+        Me.Controls.Add(Me.picB6)
+        Me.Controls.Add(Me.picB4)
+        Me.Controls.Add(Me.picT2)
         Me.Controls.Add(Me.picT5)
         Me.Controls.Add(Me.picT3)
-        Me.Controls.Add(Me.picT2)
+        Me.Controls.Add(Me.picB2)
         Me.Controls.Add(Me.picLaser)
         Me.Controls.Add(Me.lblLeft)
         Me.Controls.Add(Me.lblRight)
@@ -345,18 +333,17 @@ Partial Class Form2
         CType(Me.picLaser, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picT1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picShip, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picT2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picB2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picT3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picT5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picB2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picT4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picT6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picT2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picB4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picB6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picB3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picB5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picB1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picB4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picB6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picT4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picT6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -378,16 +365,15 @@ Partial Class Form2
     Friend WithEvents lblLeft As Label
     Friend WithEvents picLaser As PictureBox
     Friend WithEvents timerL As Timer
-    Friend WithEvents picT2 As PictureBox
+    Friend WithEvents picB2 As PictureBox
     Friend WithEvents picT3 As PictureBox
     Friend WithEvents picT5 As PictureBox
-    Friend WithEvents picB2 As PictureBox
-    Friend WithEvents picT4 As PictureBox
-    Friend WithEvents picT6 As PictureBox
+    Friend WithEvents picT2 As PictureBox
+    Friend WithEvents picB4 As PictureBox
+    Friend WithEvents picB6 As PictureBox
     Friend WithEvents picB3 As PictureBox
     Friend WithEvents picB5 As PictureBox
     Friend WithEvents picB1 As PictureBox
-    Friend WithEvents picB4 As PictureBox
-    Friend WithEvents picB6 As PictureBox
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents picT4 As PictureBox
+    Friend WithEvents picT6 As PictureBox
 End Class
