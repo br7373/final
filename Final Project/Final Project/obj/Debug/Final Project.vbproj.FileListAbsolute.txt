@@ -50,13 +50,13 @@ C:\Users\b\Desktop\files\github\final-master\Final Project\Final Project\bin\Deb
 C:\Users\b\Desktop\files\github\final-master\Final Project\Final Project\bin\Debug\Final Project.xml
 C:\Users\b\Desktop\files\github\final-master\Final Project\Final Project\obj\Debug\Final Project.vbprojAssemblyReference.cache
 C:\Users\b\Desktop\files\github\final-master\Final Project\Final Project\obj\Debug\Final_Project.main.resources
-C:\Users\b\Desktop\files\github\final-master\Final Project\Final Project\obj\Debug\Final_Project.Form2.resources
 C:\Users\b\Desktop\files\github\final-master\Final Project\Final Project\obj\Debug\Final_Project.howtoplay.resources
 C:\Users\b\Desktop\files\github\final-master\Final Project\Final Project\obj\Debug\Final_Project.level1.resources
-C:\Users\b\Desktop\files\github\final-master\Final Project\Final Project\obj\Debug\Final_Project.Form5.resources
 C:\Users\b\Desktop\files\github\final-master\Final Project\Final Project\obj\Debug\Final_Project.Resources.resources
 C:\Users\b\Desktop\files\github\final-master\Final Project\Final Project\obj\Debug\Final Project.vbproj.GenerateResource.cache
 C:\Users\b\Desktop\files\github\final-master\Final Project\Final Project\obj\Debug\Final Project.vbproj.CoreCompileInputs.cache
 C:\Users\b\Desktop\files\github\final-master\Final Project\Final Project\obj\Debug\Final Project.exe
 C:\Users\b\Desktop\files\github\final-master\Final Project\Final Project\obj\Debug\Final Project.xml
 C:\Users\b\Desktop\files\github\final-master\Final Project\Final Project\obj\Debug\Final Project.pdb
+C:\Users\b\Desktop\files\github\final-master\Final Project\Final Project\obj\Debug\Final_Project.frmLVL1.resources
+C:\Users\b\Desktop\files\github\final-master\Final Project\Final Project\obj\Debug\Final_Project.frmLVL2.resources

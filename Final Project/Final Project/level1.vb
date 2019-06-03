@@ -1,8 +1,8 @@
-﻿Public Class Form2
+﻿Public Class frmLVL1
     Dim row1 As New Collection
     Dim row2 As New Collection
     Dim lives As Byte = 2
-
+    Dim score As Integer
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         timerL.Enabled = False 'disabling the laser timer 
         'timerLaser.Enabled = False
@@ -11,19 +11,15 @@
         row1.Add(picT1)
         row1.Add(picT2)
         row1.Add(picT3)
-        row1.Add(picT4)
-        row1.Add(picT5)
-        row1.Add(picT6)
 
         'adding invaders to collections
         row2.Add(picB1)
         row2.Add(picB2)
         row2.Add(picB3)
-        row2.Add(picB4)
-        row2.Add(picB5)
-        row2.Add(picB6)
 
         lblLifeCount.Text = lives 'displaying amount of lives to the user
+        lblScore.Text = score 'displaying the score to the user     black = 10pts purple = 30pts
+
     End Sub
     Private Sub RestartToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RestartToolStripMenuItem.Click
         Dim message As Byte 'declaring local variable
@@ -68,9 +64,8 @@
     Private Sub timer_Tick(sender As Object, e As EventArgs) Handles timer.Tick
         Static change As Boolean
         Static counter As Byte
-        Static score As Integer
 
-        For i As Byte = 1 To 6
+        For i As Byte = 1 To 3
 
             If picLaser.Bounds.IntersectsWith(row1(i).Bounds) Or picLaser.Bounds.IntersectsWith(row2(i).bounds) Then
                 picLaser.Top = picShip.Top
@@ -106,9 +101,9 @@
                 row1(i).top += 1
                 row2(i).top += 1
             End If
+
         Next
 
-        lblScore.Text = score 'displaying the score to the user     black = 10pts purple = 30pts
 
     End Sub
     Private Sub TimerL_Tick(sender As Object, e As EventArgs) Handles timerL.Tick

@@ -8,7 +8,7 @@
     End Sub
 
     Private Sub btnStart_Click(sender As Object, e As EventArgs) Handles btnStart.Click
-        Form2.Show() 'showing the game form
+        frmLVL1.Show() 'showing the game form
         Me.Hide() 'hiding the main form
     End Sub
 

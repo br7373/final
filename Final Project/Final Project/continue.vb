@@ -1,6 +1,6 @@
 ﻿Public Class level1
     Private Sub btnNextLVL_Click(sender As Object, e As EventArgs) Handles btnNextLVL.Click
-        Form5.Show() 'showing the game form
+        frmLVL2.Show() 'showing the game form
         Me.Hide() 'hiding the main form
     End Sub
 
