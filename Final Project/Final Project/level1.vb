@@ -1,8 +1,10 @@
 ﻿Public Class frmLVL1
     Dim row1 As New Collection
     Dim row2 As New Collection
-    Dim lives As Byte = 2
+    Dim laser As New Collection
     Dim score As Integer
+    Dim lasers As Byte
+
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         timerL.Enabled = False 'disabling the laser timer 
         'timerLaser.Enabled = False
@@ -17,7 +19,6 @@
         row2.Add(picB2)
         row2.Add(picB3)
 
-        lblLifeCount.Text = lives 'displaying amount of lives to the user
         lblScore.Text = score 'displaying the score to the user     black = 10pts purple = 30pts
 
     End Sub
@@ -97,7 +98,7 @@
                 row2(i).left += 5
             End If
 
-            If counter Mod 2 Then
+            If counter Mod 4 Then
                 row1(i).top += 1
                 row2(i).top += 1
             End If
