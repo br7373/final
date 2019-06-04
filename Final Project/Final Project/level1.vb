@@ -3,7 +3,7 @@
     Dim row2 As New Collection
     Dim laser As New Collection
     Dim score As Integer
-    Dim lasers As Byte
+    Dim lasers As Byte = 10
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         timerL.Enabled = False 'disabling the laser timer 
@@ -19,6 +19,18 @@
         row2.Add(picB2)
         row2.Add(picB3)
 
+        laser.Add(PictureBox1)
+        laser.Add(PictureBox2)
+        laser.Add(PictureBox3)
+        laser.Add(PictureBox4)
+        laser.Add(PictureBox5)
+        laser.Add(PictureBox6)
+        laser.Add(PictureBox7)
+        laser.Add(PictureBox8)
+        laser.Add(PictureBox9)
+        laser.Add(PictureBox10)
+
+        lblLaserCount.Text = lasers 'displaying how many lasers are left
         lblScore.Text = score 'displaying the score to the user     black = 10pts purple = 30pts
 
     End Sub
@@ -40,21 +52,20 @@
     Private Sub Form2_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
         If e.KeyCode = Keys.Left Then
             picShip.Location = New Point(picShip.Location.X - 5, 421) 'moving the ship with the left arrow key
-            picLaser.Top = picShip.Top
-            picLaser.Left = picShip.Left + 15
         End If
         If e.KeyCode = Keys.Right Then
             picShip.Location = New Point(picShip.Location.X + 5, 421) 'moving the ship with the right arrow key
-            picLaser.Top = picShip.Top
-            picLaser.Left = picShip.Left + 15
         End If
 
         If e.KeyCode = Keys.Up Then
-            If picLaser.Visible = True Then
-                picLaser.Top = picShip.Top
-                picLaser.Left = picShip.Left + 15
-                timerL.Enabled = True
-            End If
+            For i As Byte = 1 To 10
+                If laser(i).Visible = True Then
+                    laser(i).Top = picShip.Top
+                    laser(i).Left = picShip.Left + 15
+                    timerL.Enabled = True
+                End If
+            Next
+            lasers -= 1
         End If
     End Sub
 
@@ -68,19 +79,23 @@
 
         For i As Byte = 1 To 3
 
-            If picLaser.Bounds.IntersectsWith(row1(i).Bounds) Or picLaser.Bounds.IntersectsWith(row2(i).bounds) Then
-                picLaser.Top = picShip.Top
-                picLaser.Left = picShip.Left + 15
-                timerL.Enabled = False
-            End If
+            For x As Byte = 1 To 10 'loop within a loop to go through the lasers
 
-            If picLaser.Bounds.IntersectsWith(row1(i).bounds) Then
-                row1(i).visible = False
-                score += 10
-            ElseIf picLaser.Bounds.IntersectsWith(row2(i).bounds) Then
-                row2(i).visible = False
-                score += 30
-            End If
+                If laser(x).Bounds.IntersectsWith(row1(i).Bounds) Or laser(x).Bounds.IntersectsWith(row2(i).bounds) Then
+                    laser(x).Top = picShip.Top
+                    laser(x).Left = picShip.Left + 15
+                    timerL.Enabled = False
+                End If
+
+                If laser(x).Bounds.IntersectsWith(row1(i).bounds) Then
+                    row1(i).visible = False
+                    score += 10
+                ElseIf laser(x).Bounds.IntersectsWith(row2(i).bounds) Then
+                    row2(i).visible = False
+                    score += 30
+                End If
+
+            Next
 
             If row1(i).Bounds.IntersectsWith(lblRight.Bounds) Then
                 change = True
@@ -90,6 +105,7 @@
                 counter += 1
             End If
 
+            'makes the rows bounce back and forth
             If change = False Then
                 row1(i).Left += 5
                 row2(i).left -= 5
@@ -98,21 +114,17 @@
                 row2(i).left += 5
             End If
 
-            If counter Mod 4 Then
+            If counter Mod 4 Then 'everytime counter reaches 4 the rows go down
                 row1(i).top += 1
                 row2(i).top += 1
             End If
-
         Next
-
-
     End Sub
     Private Sub TimerL_Tick(sender As Object, e As EventArgs) Handles timerL.Tick
-        If picLaser.Visible = True Then
-            picLaser.Top -= 1
-            ' If picLaser.Top <= 0 Then
-            ' picLaser.Visible = False
-            'End If
-        End If
+        For i As Byte = 1 To 10
+            If laser(i).Visible = True Then
+                laser(i).Top -= 1
+            End If
+        Next
     End Sub
 End Class

@@ -61,6 +61,14 @@ Partial Class frmLVL2
         Me.timer = New System.Windows.Forms.Timer(Me.components)
         Me.PictureBox20 = New System.Windows.Forms.PictureBox()
         Me.lblTest = New System.Windows.Forms.Label()
+        Me.lblLaserCount = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RestartToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CloseGameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblScore = New System.Windows.Forms.Label()
         CType(Me.picT6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picT4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picB1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -94,12 +102,13 @@ Partial Class frmLVL2
         CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'picT6
         '
         Me.picT6.Image = Global.Final_Project.My.Resources.Resources.invader
-        Me.picT6.Location = New System.Drawing.Point(611, 25)
+        Me.picT6.Location = New System.Drawing.Point(612, 47)
         Me.picT6.Name = "picT6"
         Me.picT6.Size = New System.Drawing.Size(51, 42)
         Me.picT6.TabIndex = 59
@@ -108,7 +117,7 @@ Partial Class frmLVL2
         'picT4
         '
         Me.picT4.Image = Global.Final_Project.My.Resources.Resources.invader
-        Me.picT4.Location = New System.Drawing.Point(435, 25)
+        Me.picT4.Location = New System.Drawing.Point(436, 47)
         Me.picT4.Name = "picT4"
         Me.picT4.Size = New System.Drawing.Size(51, 42)
         Me.picT4.TabIndex = 58
@@ -117,7 +126,7 @@ Partial Class frmLVL2
         'picB1
         '
         Me.picB1.Image = Global.Final_Project.My.Resources.Resources.invader2
-        Me.picB1.Location = New System.Drawing.Point(171, 91)
+        Me.picB1.Location = New System.Drawing.Point(172, 113)
         Me.picB1.Name = "picB1"
         Me.picB1.Size = New System.Drawing.Size(51, 42)
         Me.picB1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -127,7 +136,7 @@ Partial Class frmLVL2
         'picB5
         '
         Me.picB5.Image = Global.Final_Project.My.Resources.Resources.invader2
-        Me.picB5.Location = New System.Drawing.Point(520, 91)
+        Me.picB5.Location = New System.Drawing.Point(521, 113)
         Me.picB5.Name = "picB5"
         Me.picB5.Size = New System.Drawing.Size(51, 42)
         Me.picB5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -137,7 +146,7 @@ Partial Class frmLVL2
         'picB3
         '
         Me.picB3.Image = Global.Final_Project.My.Resources.Resources.invader2
-        Me.picB3.Location = New System.Drawing.Point(349, 91)
+        Me.picB3.Location = New System.Drawing.Point(350, 113)
         Me.picB3.Name = "picB3"
         Me.picB3.Size = New System.Drawing.Size(51, 42)
         Me.picB3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -147,7 +156,7 @@ Partial Class frmLVL2
         'picB6
         '
         Me.picB6.Image = Global.Final_Project.My.Resources.Resources.invader2
-        Me.picB6.Location = New System.Drawing.Point(611, 91)
+        Me.picB6.Location = New System.Drawing.Point(612, 113)
         Me.picB6.Name = "picB6"
         Me.picB6.Size = New System.Drawing.Size(51, 42)
         Me.picB6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -157,7 +166,7 @@ Partial Class frmLVL2
         'picB4
         '
         Me.picB4.Image = Global.Final_Project.My.Resources.Resources.invader2
-        Me.picB4.Location = New System.Drawing.Point(435, 91)
+        Me.picB4.Location = New System.Drawing.Point(436, 113)
         Me.picB4.Name = "picB4"
         Me.picB4.Size = New System.Drawing.Size(51, 42)
         Me.picB4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -167,7 +176,7 @@ Partial Class frmLVL2
         'picT2
         '
         Me.picT2.Image = Global.Final_Project.My.Resources.Resources.invader
-        Me.picT2.Location = New System.Drawing.Point(257, 25)
+        Me.picT2.Location = New System.Drawing.Point(258, 47)
         Me.picT2.Name = "picT2"
         Me.picT2.Size = New System.Drawing.Size(51, 42)
         Me.picT2.TabIndex = 52
@@ -176,7 +185,7 @@ Partial Class frmLVL2
         'picT5
         '
         Me.picT5.Image = Global.Final_Project.My.Resources.Resources.invader
-        Me.picT5.Location = New System.Drawing.Point(520, 25)
+        Me.picT5.Location = New System.Drawing.Point(521, 47)
         Me.picT5.Name = "picT5"
         Me.picT5.Size = New System.Drawing.Size(51, 42)
         Me.picT5.TabIndex = 51
@@ -185,7 +194,7 @@ Partial Class frmLVL2
         'picT3
         '
         Me.picT3.Image = Global.Final_Project.My.Resources.Resources.invader
-        Me.picT3.Location = New System.Drawing.Point(349, 25)
+        Me.picT3.Location = New System.Drawing.Point(350, 47)
         Me.picT3.Name = "picT3"
         Me.picT3.Size = New System.Drawing.Size(51, 42)
         Me.picT3.TabIndex = 50
@@ -194,7 +203,7 @@ Partial Class frmLVL2
         'picB2
         '
         Me.picB2.Image = Global.Final_Project.My.Resources.Resources.invader2
-        Me.picB2.Location = New System.Drawing.Point(257, 91)
+        Me.picB2.Location = New System.Drawing.Point(258, 113)
         Me.picB2.Name = "picB2"
         Me.picB2.Size = New System.Drawing.Size(51, 42)
         Me.picB2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -204,7 +213,7 @@ Partial Class frmLVL2
         'picT1
         '
         Me.picT1.Image = Global.Final_Project.My.Resources.Resources.invader
-        Me.picT1.Location = New System.Drawing.Point(171, 25)
+        Me.picT1.Location = New System.Drawing.Point(172, 47)
         Me.picT1.Name = "picT1"
         Me.picT1.Size = New System.Drawing.Size(51, 42)
         Me.picT1.TabIndex = 48
@@ -223,7 +232,7 @@ Partial Class frmLVL2
         'timerL
         '
         Me.timerL.Enabled = True
-        Me.timerL.Interval = 1
+        Me.timerL.Interval = 1000
         '
         'lblLeft
         '
@@ -434,11 +443,79 @@ Partial Class frmLVL2
         Me.lblTest.TabIndex = 84
         Me.lblTest.Text = "Label1"
         '
+        'lblLaserCount
+        '
+        Me.lblLaserCount.AutoSize = True
+        Me.lblLaserCount.Location = New System.Drawing.Point(229, 9)
+        Me.lblLaserCount.Name = "lblLaserCount"
+        Me.lblLaserCount.Size = New System.Drawing.Size(10, 13)
+        Me.lblLaserCount.TabIndex = 85
+        Me.lblLaserCount.Text = "."
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(179, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(44, 13)
+        Me.Label1.TabIndex = 86
+        Me.Label1.Text = "Lasers :"
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(813, 24)
+        Me.MenuStrip1.TabIndex = 87
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'FileToolStripMenuItem
+        '
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RestartToolStripMenuItem, Me.CloseGameToolStripMenuItem})
+        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.FileToolStripMenuItem.Text = "File"
+        '
+        'RestartToolStripMenuItem
+        '
+        Me.RestartToolStripMenuItem.Name = "RestartToolStripMenuItem"
+        Me.RestartToolStripMenuItem.Size = New System.Drawing.Size(137, 22)
+        Me.RestartToolStripMenuItem.Text = "Restart"
+        '
+        'CloseGameToolStripMenuItem
+        '
+        Me.CloseGameToolStripMenuItem.Name = "CloseGameToolStripMenuItem"
+        Me.CloseGameToolStripMenuItem.Size = New System.Drawing.Size(137, 22)
+        Me.CloseGameToolStripMenuItem.Text = "Close Game"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(324, 9)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(41, 13)
+        Me.Label2.TabIndex = 88
+        Me.Label2.Text = "Score :"
+        '
+        'lblScore
+        '
+        Me.lblScore.AutoSize = True
+        Me.lblScore.Location = New System.Drawing.Point(367, 9)
+        Me.lblScore.Name = "lblScore"
+        Me.lblScore.Size = New System.Drawing.Size(10, 13)
+        Me.lblScore.TabIndex = 89
+        Me.lblScore.Text = "."
+        '
         'frmLVL2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(813, 690)
+        Me.Controls.Add(Me.lblScore)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lblLaserCount)
         Me.Controls.Add(Me.lblTest)
         Me.Controls.Add(Me.PictureBox20)
         Me.Controls.Add(Me.PictureBox19)
@@ -475,6 +552,8 @@ Partial Class frmLVL2
         Me.Controls.Add(Me.picT3)
         Me.Controls.Add(Me.picB2)
         Me.Controls.Add(Me.picT1)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmLVL2"
         Me.Text = "Space Invaders | Level 2"
         CType(Me.picT6, System.ComponentModel.ISupportInitialize).EndInit()
@@ -510,6 +589,8 @@ Partial Class frmLVL2
         CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -553,4 +634,12 @@ Partial Class frmLVL2
     Friend WithEvents timer As Timer
     Friend WithEvents PictureBox20 As PictureBox
     Friend WithEvents lblTest As Label
+    Friend WithEvents lblLaserCount As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RestartToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CloseGameToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label2 As Label
+    Friend WithEvents lblScore As Label
 End Class
