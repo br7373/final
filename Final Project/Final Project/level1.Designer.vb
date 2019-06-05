@@ -41,9 +41,7 @@ Partial Class frmLVL1
         Me.picT2 = New System.Windows.Forms.PictureBox()
         Me.picB3 = New System.Windows.Forms.PictureBox()
         Me.picB1 = New System.Windows.Forms.PictureBox()
-        Me.picLaser = New System.Windows.Forms.PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.lblLaserCount = New System.Windows.Forms.Label()
+        Me.picLaser = New System.Windows.Forms.Label()
         Me.menuStrip.SuspendLayout()
         CType(Me.picT1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picShip, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -52,7 +50,6 @@ Partial Class frmLVL1
         CType(Me.picT2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picB3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picB1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picLaser, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'timer
@@ -204,38 +201,17 @@ Partial Class frmLVL1
         '
         'picLaser
         '
-        Me.picLaser.Image = Global.Final_Project.My.Resources.Resources.laser
-        Me.picLaser.Location = New System.Drawing.Point(323, 411)
+        Me.picLaser.BackColor = System.Drawing.Color.Lime
+        Me.picLaser.Location = New System.Drawing.Point(319, 393)
         Me.picLaser.Name = "picLaser"
-        Me.picLaser.Size = New System.Drawing.Size(5, 16)
+        Me.picLaser.Size = New System.Drawing.Size(14, 25)
         Me.picLaser.TabIndex = 46
-        Me.picLaser.TabStop = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(152, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(44, 13)
-        Me.Label1.TabIndex = 88
-        Me.Label1.Text = "Lasers :"
-        '
-        'lblLaserCount
-        '
-        Me.lblLaserCount.AutoSize = True
-        Me.lblLaserCount.Location = New System.Drawing.Point(202, 9)
-        Me.lblLaserCount.Name = "lblLaserCount"
-        Me.lblLaserCount.Size = New System.Drawing.Size(10, 13)
-        Me.lblLaserCount.TabIndex = 87
-        Me.lblLaserCount.Text = "."
         '
         'frmLVL1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(667, 494)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.lblLaserCount)
         Me.Controls.Add(Me.picLaser)
         Me.Controls.Add(Me.picB1)
         Me.Controls.Add(Me.picB3)
@@ -250,6 +226,7 @@ Partial Class frmLVL1
         Me.Controls.Add(Me.lblScore)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.menuStrip)
+        Me.KeyPreview = True
         Me.MainMenuStrip = Me.menuStrip
         Me.Name = "frmLVL1"
         Me.Text = "Space Invaders | Level 1"
@@ -262,7 +239,6 @@ Partial Class frmLVL1
         CType(Me.picT2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picB3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picB1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picLaser, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -286,7 +262,5 @@ Partial Class frmLVL1
     Friend WithEvents picT2 As PictureBox
     Friend WithEvents picB3 As PictureBox
     Friend WithEvents picB1 As PictureBox
-    Friend WithEvents picLaser As PictureBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents lblLaserCount As Label
+    Friend WithEvents picLaser As Label
 End Class

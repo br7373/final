@@ -40,8 +40,6 @@ Partial Class frmLVL2
         Me.lblLeft = New System.Windows.Forms.Label()
         Me.lblRight = New System.Windows.Forms.Label()
         Me.timer = New System.Windows.Forms.Timer(Me.components)
-        Me.lblLaserCount = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RestartToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -215,24 +213,6 @@ Partial Class frmLVL2
         '
         Me.timer.Enabled = True
         '
-        'lblLaserCount
-        '
-        Me.lblLaserCount.AutoSize = True
-        Me.lblLaserCount.Location = New System.Drawing.Point(229, 9)
-        Me.lblLaserCount.Name = "lblLaserCount"
-        Me.lblLaserCount.Size = New System.Drawing.Size(10, 13)
-        Me.lblLaserCount.TabIndex = 85
-        Me.lblLaserCount.Text = "."
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(179, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(44, 13)
-        Me.Label1.TabIndex = 86
-        Me.Label1.Text = "Lasers :"
-        '
         'MenuStrip1
         '
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem})
@@ -295,8 +275,6 @@ Partial Class frmLVL2
         Me.ClientSize = New System.Drawing.Size(813, 690)
         Me.Controls.Add(Me.lblScore)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.lblLaserCount)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.lblRight)
         Me.Controls.Add(Me.lblLeft)
@@ -355,8 +333,6 @@ Partial Class frmLVL2
     Friend WithEvents lblLeft As Label
     Friend WithEvents lblRight As Label
     Friend WithEvents timer As Timer
-    Friend WithEvents lblLaserCount As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RestartToolStripMenuItem As ToolStripMenuItem

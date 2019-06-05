@@ -2,12 +2,10 @@
     Dim row1 As New Collection
     Dim row2 As New Collection
     'Dim laser As New Collection
-    Dim lasers As Byte = 20
     Dim score As Integer
     Dim i As Byte = 1
     '   Dim c As Integer
     'Dim lasercount As Byte
-
     Private Sub FrmLVL2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         timerL.Enabled = False
 
