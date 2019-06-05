@@ -25,37 +25,10 @@
         row2.Add(picB5)
         row2.Add(picB6)
 
-        'laser.Add(PictureBox1)
-        'laser.Add(PictureBox2)
-        'laser.Add(PictureBox3)
-        'laser.Add(PictureBox4)
-        'laser.Add(PictureBox5)
-        'laser.Add(PictureBox6)
-        'laser.Add(PictureBox7)
-        'laser.Add(PictureBox8)
-        'laser.Add(PictureBox9)
-        'laser.Add(PictureBox10)
-        'laser.Add(PictureBox11)
-        'laser.Add(PictureBox12)
-        ' laser.Add(PictureBox13)
-        ' laser.Add(PictureBox14)
-        ' laser.Add(PictureBox15)
-        ' laser.Add(PictureBox16)
-        'laser.Add(PictureBox17)
-        ''laser.Add(PictureBox18)
-        ' laser.Add(PictureBox19)
-        ' laser.Add(PictureBox20)
-
-        lblLaserCount.Text = lasers
         lblScore.Text = score
     End Sub
 
     Private Sub frmLVL2_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
-
-        '  lasers = 20 - c
-
-        'CreateGraphics.FillRectangle(New SolidBrush(Color.Green), 10, 10, 10, 10)
-
         If e.KeyCode = Keys.Left Then
             picShip.Location = New Point(picShip.Location.X - 5, 610) 'moving the ship with the left arrow key
         End If
@@ -67,17 +40,11 @@
         If e.KeyCode = Keys.Up Then
             PictureBox1.Top = picShip.Top
             PictureBox1.Left = picShip.Left + 15
-            'laser(i).Top = picShip.Top
-            ' laser(i).Left = picShip.Left + 15
             Do
                 PictureBox1.Top -= 10
                 'laser(i).top -= 10
-            Loop While (PictureBox1.top > 5)
-
-
-
+            Loop While (PictureBox1.Top > 5)
         End If
-
     End Sub
 
     Private Sub timer_Tick(sender As Object, e As EventArgs) Handles timer.Tick
@@ -120,10 +87,6 @@
                 row1(i).top += 1
                 row2(i).top += 1
             End If
-
         Next
-
     End Sub
-
-
 End Class

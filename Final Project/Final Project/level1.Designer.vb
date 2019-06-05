@@ -41,16 +41,7 @@ Partial Class frmLVL1
         Me.picT2 = New System.Windows.Forms.PictureBox()
         Me.picB3 = New System.Windows.Forms.PictureBox()
         Me.picB1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
+        Me.picLaser = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblLaserCount = New System.Windows.Forms.Label()
         Me.menuStrip.SuspendLayout()
@@ -61,16 +52,7 @@ Partial Class frmLVL1
         CType(Me.picT2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picB3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picB1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picLaser, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'timer
@@ -220,95 +202,14 @@ Partial Class frmLVL1
         Me.picB1.TabIndex = 45
         Me.picB1.TabStop = False
         '
-        'PictureBox1
+        'picLaser
         '
-        Me.PictureBox1.Image = Global.Final_Project.My.Resources.Resources.laser
-        Me.PictureBox1.Location = New System.Drawing.Point(323, 411)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(5, 16)
-        Me.PictureBox1.TabIndex = 46
-        Me.PictureBox1.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.Final_Project.My.Resources.Resources.laser
-        Me.PictureBox2.Location = New System.Drawing.Point(323, 411)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(5, 16)
-        Me.PictureBox2.TabIndex = 47
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = Global.Final_Project.My.Resources.Resources.laser
-        Me.PictureBox3.Location = New System.Drawing.Point(323, 411)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(5, 16)
-        Me.PictureBox3.TabIndex = 48
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Image = Global.Final_Project.My.Resources.Resources.laser
-        Me.PictureBox4.Location = New System.Drawing.Point(323, 411)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(5, 16)
-        Me.PictureBox4.TabIndex = 49
-        Me.PictureBox4.TabStop = False
-        '
-        'PictureBox5
-        '
-        Me.PictureBox5.Image = Global.Final_Project.My.Resources.Resources.laser
-        Me.PictureBox5.Location = New System.Drawing.Point(323, 411)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(5, 16)
-        Me.PictureBox5.TabIndex = 50
-        Me.PictureBox5.TabStop = False
-        '
-        'PictureBox6
-        '
-        Me.PictureBox6.Image = Global.Final_Project.My.Resources.Resources.laser
-        Me.PictureBox6.Location = New System.Drawing.Point(323, 411)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(5, 16)
-        Me.PictureBox6.TabIndex = 51
-        Me.PictureBox6.TabStop = False
-        '
-        'PictureBox7
-        '
-        Me.PictureBox7.Image = Global.Final_Project.My.Resources.Resources.laser
-        Me.PictureBox7.Location = New System.Drawing.Point(323, 411)
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(5, 16)
-        Me.PictureBox7.TabIndex = 52
-        Me.PictureBox7.TabStop = False
-        '
-        'PictureBox8
-        '
-        Me.PictureBox8.Image = Global.Final_Project.My.Resources.Resources.laser
-        Me.PictureBox8.Location = New System.Drawing.Point(323, 411)
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(5, 16)
-        Me.PictureBox8.TabIndex = 53
-        Me.PictureBox8.TabStop = False
-        '
-        'PictureBox9
-        '
-        Me.PictureBox9.Image = Global.Final_Project.My.Resources.Resources.laser
-        Me.PictureBox9.Location = New System.Drawing.Point(323, 411)
-        Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(5, 16)
-        Me.PictureBox9.TabIndex = 54
-        Me.PictureBox9.TabStop = False
-        '
-        'PictureBox10
-        '
-        Me.PictureBox10.Image = Global.Final_Project.My.Resources.Resources.laser
-        Me.PictureBox10.Location = New System.Drawing.Point(323, 411)
-        Me.PictureBox10.Name = "PictureBox10"
-        Me.PictureBox10.Size = New System.Drawing.Size(5, 16)
-        Me.PictureBox10.TabIndex = 55
-        Me.PictureBox10.TabStop = False
+        Me.picLaser.Image = Global.Final_Project.My.Resources.Resources.laser
+        Me.picLaser.Location = New System.Drawing.Point(323, 411)
+        Me.picLaser.Name = "picLaser"
+        Me.picLaser.Size = New System.Drawing.Size(5, 16)
+        Me.picLaser.TabIndex = 46
+        Me.picLaser.TabStop = False
         '
         'Label1
         '
@@ -335,16 +236,7 @@ Partial Class frmLVL1
         Me.ClientSize = New System.Drawing.Size(667, 494)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblLaserCount)
-        Me.Controls.Add(Me.PictureBox10)
-        Me.Controls.Add(Me.PictureBox9)
-        Me.Controls.Add(Me.PictureBox8)
-        Me.Controls.Add(Me.PictureBox7)
-        Me.Controls.Add(Me.PictureBox6)
-        Me.Controls.Add(Me.PictureBox5)
-        Me.Controls.Add(Me.PictureBox4)
-        Me.Controls.Add(Me.PictureBox3)
-        Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.picLaser)
         Me.Controls.Add(Me.picB1)
         Me.Controls.Add(Me.picB3)
         Me.Controls.Add(Me.picT2)
@@ -370,16 +262,7 @@ Partial Class frmLVL1
         CType(Me.picT2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picB3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picB1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picLaser, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -403,16 +286,7 @@ Partial Class frmLVL1
     Friend WithEvents picT2 As PictureBox
     Friend WithEvents picB3 As PictureBox
     Friend WithEvents picB1 As PictureBox
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents PictureBox4 As PictureBox
-    Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents PictureBox6 As PictureBox
-    Friend WithEvents PictureBox7 As PictureBox
-    Friend WithEvents PictureBox8 As PictureBox
-    Friend WithEvents PictureBox9 As PictureBox
-    Friend WithEvents PictureBox10 As PictureBox
+    Friend WithEvents picLaser As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents lblLaserCount As Label
 End Class

@@ -6,8 +6,8 @@
     Dim lasers As Byte = 10
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        timerL.Enabled = False 'disabling the laser timer 
-        'timerLaser.Enabled = False
+        'timerL.Enabled = False 'disabling the laser timer 
+        ''timerLaser.Enabled = False
 
         'adding invaders to collections
         row1.Add(picT1)
@@ -19,20 +19,26 @@
         row2.Add(picB2)
         row2.Add(picB3)
 
-        laser.Add(PictureBox1)
-        laser.Add(PictureBox2)
-        laser.Add(PictureBox3)
-        laser.Add(PictureBox4)
-        laser.Add(PictureBox5)
-        laser.Add(PictureBox6)
-        laser.Add(PictureBox7)
-        laser.Add(PictureBox8)
-        laser.Add(PictureBox9)
-        laser.Add(PictureBox10)
-
         lblLaserCount.Text = lasers 'displaying how many lasers are left
         lblScore.Text = score 'displaying the score to the user     black = 10pts purple = 30pts
 
+
+
+        For i As Byte = 1 To 3
+            If picLaser.Bounds.IntersectsWith(row1(i).Bounds) Or picLaser.Bounds.IntersectsWith(row2(i).bounds) Then
+                picLaser.Top = picShip.Top
+                picLaser.Left = picShip.Left + 15
+                timerL.Enabled = False
+            End If
+
+            If picLaser.Bounds.IntersectsWith(row1(i).bounds) Then
+                row1(i).visible = False
+                score += 10
+            ElseIf picLaser.Bounds.IntersectsWith(row2(i).bounds) Then
+                row2(i).visible = False
+                score += 30
+            End If
+        Next
     End Sub
     Private Sub RestartToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RestartToolStripMenuItem.Click
         Dim message As Byte 'declaring local variable
@@ -58,44 +64,51 @@
         End If
 
         If e.KeyCode = Keys.Up Then
-            For i As Byte = 1 To 10
-                If laser(i).Visible = True Then
-                    laser(i).Top = picShip.Top
-                    laser(i).Left = picShip.Left + 15
-                    timerL.Enabled = True
-                End If
-            Next
-            lasers -= 1
+            If e.KeyCode = Keys.Up Then
+                picLaser.Top = picShip.Top
+                picLaser.Left = picShip.Left + 15
+                Do
+                    picLaser.Top -= 10
+                Loop While (picLaser.Top > 5)
+            End If
         End If
-    End Sub
-
-    Private Sub reset()
-        picShip.Location = New Point(341, 421)
     End Sub
 
     Private Sub timer_Tick(sender As Object, e As EventArgs) Handles timer.Tick
         Static change As Boolean
         Static counter As Byte
 
+        'If picB1.Bounds.IntersectsWith(picLaser.Bounds) Then
+        '    picB1.Visible = False
+        '    score += 30
+        'End If
+
+        'If picB2.Bounds.IntersectsWith(picLaser.Bounds) Then
+        '    picB2.Visible = False
+        '    score += 30
+        'End If
+
+        'If picB3.Bounds.IntersectsWith(picLaser.Bounds) Then
+        '    picB3.Visible = False
+        '    score += 30
+        'End If
+
         For i As Byte = 1 To 3
 
-            For x As Byte = 1 To 10 'loop within a loop to go through the lasers
 
-                If laser(x).Bounds.IntersectsWith(row1(i).Bounds) Or laser(x).Bounds.IntersectsWith(row2(i).bounds) Then
-                    laser(x).Top = picShip.Top
-                    laser(x).Left = picShip.Left + 15
-                    timerL.Enabled = False
-                End If
+            If picLaser.Bounds.IntersectsWith(row1(i).Bounds) Or picLaser.Bounds.IntersectsWith(row2(i).bounds) Then
+                picLaser.Top = picShip.Top
+                picLaser.Left = picShip.Left + 15
+                '    timerL.Enabled = False
+            End If
 
-                If laser(x).Bounds.IntersectsWith(row1(i).bounds) Then
-                    row1(i).visible = False
-                    score += 10
-                ElseIf laser(x).Bounds.IntersectsWith(row2(i).bounds) Then
-                    row2(i).visible = False
-                    score += 30
-                End If
-
-            Next
+            If picLaser.Bounds.IntersectsWith(row1(i).bounds) Then
+                row1(i).visible = False
+                score += 10
+            ElseIf picLaser.Bounds.IntersectsWith(row2(i).bounds) Then
+                row2(i).visible = False
+                score += 30
+            End If
 
             If row1(i).Bounds.IntersectsWith(lblRight.Bounds) Then
                 change = True
@@ -117,13 +130,6 @@
             If counter Mod 4 Then 'everytime counter reaches 4 the rows go down
                 row1(i).top += 1
                 row2(i).top += 1
-            End If
-        Next
-    End Sub
-    Private Sub TimerL_Tick(sender As Object, e As EventArgs) Handles timerL.Tick
-        For i As Byte = 1 To 10
-            If laser(i).Visible = True Then
-                laser(i).Top -= 1
             End If
         Next
     End Sub
