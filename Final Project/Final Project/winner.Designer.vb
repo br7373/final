@@ -25,6 +25,8 @@ Partial Class winner
         Me.lblPrint = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnSave = New System.Windows.Forms.Button()
+        Me.btnExit = New System.Windows.Forms.Button()
+        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.SuspendLayout()
         '
         'lblPrint
@@ -39,7 +41,7 @@ Partial Class winner
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(125, 264)
+        Me.Label1.Location = New System.Drawing.Point(125, 150)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(248, 13)
         Me.Label1.TabIndex = 1
@@ -47,18 +49,28 @@ Partial Class winner
         '
         'btnSave
         '
-        Me.btnSave.Location = New System.Drawing.Point(128, 297)
+        Me.btnSave.Location = New System.Drawing.Point(128, 192)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(78, 64)
         Me.btnSave.TabIndex = 2
         Me.btnSave.Text = "Save"
         Me.btnSave.UseVisualStyleBackColor = True
         '
+        'btnExit
+        '
+        Me.btnExit.Location = New System.Drawing.Point(502, 399)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(97, 53)
+        Me.btnExit.TabIndex = 3
+        Me.btnExit.Text = "Exit"
+        Me.btnExit.UseVisualStyleBackColor = True
+        '
         'winner
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(624, 520)
+        Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblPrint)
@@ -72,4 +84,6 @@ Partial Class winner
     Friend WithEvents lblPrint As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents btnSave As Button
+    Friend WithEvents btnExit As Button
+    Friend WithEvents SaveFileDialog1 As SaveFileDialog
 End Class

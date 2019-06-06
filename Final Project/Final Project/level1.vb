@@ -2,11 +2,11 @@
     'declaring class level variables (can be used all throughout the form)
     Dim row1 As New Collection 'collection for the top row of invaders
     Dim row2 As New Collection 'collection for the bottom row of invaders
-    Dim score As Integer 'holds score
     Dim lasers(-1) As laser 'declaring array
     Dim counting As Integer 'counter variable used for lasers
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         'adding invaders to collections
         row1.Add(picT1)
         row1.Add(picT2)
@@ -25,6 +25,8 @@
 
         tmrTime.Start() 'starting timer that displays minutes : seconds to the user
     End Sub
+
+
     Private Sub RestartToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RestartToolStripMenuItem.Click
         Dim message As Byte 'declaring local variable
         message = MsgBox("Are you sure you want to restart?", vbYesNo) 'message box
@@ -82,14 +84,9 @@
     Private Sub timer_Tick(sender As Object, e As EventArgs) Handles timer.Tick
         Static change As Boolean 'static change boolean variable used for indicating the direction the rows should be traveling
         Static counter As Byte
-        Static win As Boolean
+        Dim win As Boolean
 
         For i As Byte = 1 To 6
-
-            If row1(i).visible = False And row2(i).visible = False Then
-                win = True
-            End If
-
             'looping through the two row collections to check for intersections with the right and left boundaries
             If row1(i).Bounds.IntersectsWith(lblRight.Bounds) Then
                 change = True 'change boolean variable is used to indicate the direction the row should be traveling
@@ -114,25 +111,19 @@
             End If
         Next
 
-        If win = True Then
-            Dim response As String
-            response = MsgBox("You win!", vbYesNo)
-            If response = vbYes Then
-                winner.Show()
-                Me.Hide()
-            Else
-                main.Show()
-                Me.Hide()
-            End If
+        If picT1.Visible = False And picT2.Visible = False And picT3.Visible = False And picT4.Visible = False And picT5.Visible = False And picT6.Visible = False And picB1.Visible = False And picB2.Visible = False And picB3.Visible = False And picB4.Visible = False And picB5.Visible = False And picB6.Visible = False Then
+            win = True
+        End If
 
+        If win = True Then
+
+            winner.Show()
+            Me.Close()
+            Exit Sub
         End If
     End Sub
 
     Private Sub TmrTime_Tick(sender As Object, e As EventArgs) Handles tmrTime.Tick
-        Dim time As Integer
-        Dim seconds As Integer
-        Dim minutes As Integer
-
         time = lblSec.Text + 1
 
         seconds = time Mod 60
@@ -148,6 +139,5 @@
         'displaying time to the user
 
         'https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/format-function-visual-basic-for-applications
-
     End Sub
 End Class
