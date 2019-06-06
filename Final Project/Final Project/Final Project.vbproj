@@ -73,6 +73,9 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="laser.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="main.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -92,18 +95,6 @@
     <Compile Include="howtoplay.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="continue.Designer.vb">
-      <DependentUpon>continue.vb</DependentUpon>
-    </Compile>
-    <Compile Include="continue.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="level2.Designer.vb">
-      <DependentUpon>level2.vb</DependentUpon>
-    </Compile>
-    <Compile Include="level2.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -119,6 +110,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="winner.Designer.vb">
+      <DependentUpon>winner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="winner.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="main.resx">
@@ -130,17 +127,14 @@
     <EmbeddedResource Include="howtoplay.resx">
       <DependentUpon>howtoplay.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="continue.resx">
-      <DependentUpon>continue.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="level2.resx">
-      <DependentUpon>level2.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="winner.resx">
+      <DependentUpon>winner.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -169,6 +163,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\laser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\instructions.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

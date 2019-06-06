@@ -24,35 +24,49 @@ Partial Class howtoplay
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(27, 63)
+        Me.Label1.Location = New System.Drawing.Point(12, 28)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(248, 13)
+        Me.Label1.Size = New System.Drawing.Size(274, 13)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Use the left and right arrow keys to move your ship."
+        Me.Label1.Text = "Use the LEFT and RIGHT arrow keys to move your ship."
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(27, 97)
+        Me.Label2.Location = New System.Drawing.Point(12, 54)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(239, 13)
+        Me.Label2.Size = New System.Drawing.Size(173, 13)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Use the up arrow key to keep the invaders away."
+        Me.Label2.Text = "Use the UP arrow key to fire lasers."
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Final_Project.My.Resources.Resources.instructions
+        Me.PictureBox1.Location = New System.Drawing.Point(58, 85)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(184, 137)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
         '
         'howtoplay
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(303, 170)
+        Me.ClientSize = New System.Drawing.Size(317, 234)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "howtoplay"
         Me.Text = "How to Play"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -60,4 +74,5 @@ Partial Class howtoplay
 
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

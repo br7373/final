@@ -22,6 +22,11 @@ Final Project
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:Final_Project.My.Resources.Resources.instructions">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Final_Project.My.Resources.Resources.invader">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
