@@ -124,7 +124,7 @@
     End Sub
 
     Private Sub TmrTime_Tick(sender As Object, e As EventArgs) Handles tmrTime.Tick
-        time = lblSec.Text + 1
+        time = lblSec.Text + 1 'adding 1 every second
 
         seconds = time Mod 60
 

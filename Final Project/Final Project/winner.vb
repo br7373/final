@@ -23,4 +23,25 @@
         WriteLine(filenum, score, minutes, seconds)
         FileClose(filenum)
     End Sub
+
+    Private Sub btnOpen_Click(sender As Object, e As EventArgs) Handles btnOpen.Click
+        Dim filename As String
+        Dim filenum As Integer
+        OpenFileDialog1.Title = "Open File"
+        OpenFileDialog1.ShowDialog()
+        filename = OpenFileDialog1.FileName
+        OpenFileDialog1.DefaultExt = "txt"
+        filenum = FreeFile()
+        FileOpen(filenum, filename, OpenMode.Input)
+
+        Do While Not EOF(filenum)
+            Input(filenum, score)
+            Input(filenum, minutes)
+            Input(filenum, seconds)
+        Loop
+
+        FileClose(filenum)
+        lstOpen.Items.Add("Score : " & score)
+        lstOpen.Items.Add("Time : " & Format(minutes, "00") & ":" & Format(seconds, "00"))
+    End Sub
 End Class
